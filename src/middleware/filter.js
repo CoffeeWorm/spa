@@ -1,32 +1,27 @@
-const Filter = require('../filter/filter');
-
 let filters = [];
 
-let filter = {
-  add: function(ft) {
+export let filter = {
+  add: function (ft) {
     if (ft instanceof Array) {
-      ft.forEach(function(it) {
+      ft.forEach(function (it) {
         this.add(it);
       }.bind(this));
     } else {
       filters.push(ft);
     }
+    return filters;
   },
   //单页中间件
-  mw: function(context, next) {
-    console.log('--------  filter middleware  --------');
+  mw: function (context, next) {
     let index = 0;
-    let chain = function() {
+    let chain = function () {
       let filter = filters[index++];
       if (filter) {
-        let ft = new Filter(context, next, chain);
+        let ft = new filter(context, next, chain);
         ft.doFilter();
-      } else {
-        console.log('--------end filter middleware--------');
-        next();
       }
+      next();
     };
     chain();
   }
 };
-module.exports = filter;

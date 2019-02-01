@@ -1,22 +1,21 @@
-
 let mws = [];
 
-let spa = {
-  add: function(mw) {
+export let spa = {
+  add(mw) {
     if (typeof mw === 'function') {
       mws.push(mw);
     }
+    return true;
   },
-  dispatch: function(context) {
+  dispatch(context) {
     let index = 0;
-    let next = function() {
+    let next = function () {
       let mw = mws[index++];
       if (mw) {
         return mw(context, next);
       }
     };
     next();
+    return true;
   }
 };
-
-module.exports = spa;

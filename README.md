@@ -1,5 +1,7 @@
 # spa
-<a href='https://travis-ci.org/CoffeeWorm/spa.svg?branch=master'><img src='https://travis-ci.org/CoffeeWorm/spa.svg?branch=master' alt='Coverage Status' /></a> <a href='https://coveralls.io/github/CoffeeWorm/spa?branch=master'><img src='https://coveralls.io/repos/github/CoffeeWorm/spa/badge.svg?branch=master' alt='Coverage Status' /></a>
+
+ <a href='https://travis-ci.org/CoffeeWorm/spa.svg?branch=feature%2Fci'><img src='https://travis-ci.org/CoffeeWorm/spa.svg?branch=feature%2Fci' alt='Coverage Status' /></a> <a href='https://coveralls.io/github/CoffeeWorm/spa?branch=feature%2Fci'><img src='https://coveralls.io/repos/github/CoffeeWorm/spa/badge.svg?branch=feature%2Fci' alt='Coverage Status' /></a>
+
 ## Build Setup
 
 ``` bash
